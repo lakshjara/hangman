@@ -30,6 +30,7 @@ Objetivo del Juego: Los jugadores deben adivinar la palabra antes de que se comp
 1. Entrada:
 
 Palabra secreta: la palabra que los jugadores deben adivinar.
+
 Número máximo de intentos: el número máximo de errores permitidos antes de perder el juego.
 
 2. Proceso:
@@ -63,4 +64,5 @@ Si ha perdido, mostrar un mensaje de derrota y la palabra secreta.
 3. Salida:
 
 Mensaje final indicando si el jugador ganó o perdió.
+
 La palabra secreta completa si el jugador perdió.
