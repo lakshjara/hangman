@@ -1,11 +1,6 @@
 # Proyecto Final
-Este proyecto es un ejemplo de lo que se espera en cuanto a complejidad y formato de su proyecto libre final de TC 1028. úsenlo para guiar sus decisiones de diseño y ver ejemplos de cómo se aplica PEP8. No copien código ni funciones, pueden basarse en estas pero escriban las suyas. Lo que nos interesa es que interioricen las estrategias y entiendan la lógica, para generar un pograma modular correctamente estrcuturado. Por ejemplo vean la forma en la que se separa el código en funciones que se puedan reusar en cada parte.
+En este proyecto se demostrará el manejo de funciones en el lenguaje de programación python, recopilando los temas vistos en la clase de pensamiento computacional para la ingeniería. 
 
-Con cada tema que veamos vean como se aplica en el proyecto para construir un programa. En general estre proyecto sigue estándares (PEP 8) y buenas prácticas de industria que también evaluamos en el curso, así que les sirve de ejemplo para estilo también.
-
-En los comentarios dentro de cada función, entre parentesis, vienen las subcompetencias que demuestra esa función o ese conjunto de funciones.
-
-espero les sea de ayuda :D
 # Hangman
 
 ### contexto
