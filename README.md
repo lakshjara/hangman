@@ -62,20 +62,21 @@ Mensaje final indicando si el jugador ganó o perdió.
 
 La palabra secreta completa si el jugador perdió.
 
-#hangman
+# Código Juego del ahorcado
 import random #random.choice es para escoger una palabra aleatroia de la lista
 
-# Lista de palabras para el juego
+#Lista de palabras para el juego
 palabras = ['python', 'programacion', 'ahorcado', 'juego', 'computadora', 'teclado', 'pantalla', 'tec', 'borregos']
 
-#esta función utiliza random.choice(palabras) para devolver una palabra seleccionada aleatoriamente de la lista palabras
+#utiliza random.choice(palabras) para devolver una palabra seleccionada aleatoriamente de la lista palabras
 def elige_palabra():
     return random.choice(palabras) #palabra seleccionada aleatoriamente
 
-
+#muestra el estado actual de la palabra que se está adivinando
 def muestra_progreso(palabra, letras_adivinadas): 
     return ' '.join([letra if letra in letras_adivinadas else '_' for letra in palabra]) #.join unie todos los elementos del iterable y crea una cadena y la devuelve como salida al usuario
 
+#ejecuta el ciclo del juego
 def jugar():
     palabra = elige_palabra()
     letras_adivinadas = set()
@@ -94,7 +95,7 @@ def jugar():
             print("Ya adivinaste esa letra. Intenta con otra.")
             continue
 
-        letras_adivinadas.add(letra)
+        letras_adivinadas.add(letra) #.add inserta un solo elemento en un conjunto
 
         if letra in palabra:
             print(f"¡Bien hecho! La letra '{letra}' está en la palabra.") #f-string para mostrar valores de variables
