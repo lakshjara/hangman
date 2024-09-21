@@ -63,27 +63,27 @@ Mensaje final indicando si el jugador ganó o perdió.
 La palabra secreta completa si el jugador perdió.
 
 # Código Juego del ahorcado
-import random #random.choice es para escoger una palabra aleatroia de la lista
+    import random #random.choice es para escoger una palabra aleatroia de la lista
 
-#Lista de palabras para el juego
-palabras = ['python', 'programacion', 'ahorcado', 'juego', 'computadora', 'teclado', 'pantalla', 'tec', 'borregos']
+    #Lista de palabras para el juego
+    palabras = ['python', 'programacion', 'ahorcado', 'juego', 'computadora', 'teclado', 'pantalla', 'tec', 'borregos']
 
-#utiliza random.choice(palabras) para devolver una palabra seleccionada aleatoriamente de la lista palabras
-def elige_palabra():
+    #utiliza random.choice(palabras) para devolver una palabra seleccionada aleatoriamente de la lista palabras
+    def elige_palabra():
     return random.choice(palabras) #palabra seleccionada aleatoriamente
 
-#muestra el estado actual de la palabra que se está adivinando
-def muestra_progreso(palabra, letras_adivinadas): 
+    #muestra el estado actual de la palabra que se está adivinando
+    def muestra_progreso(palabra, letras_adivinadas): 
     return ' '.join([letra if letra in letras_adivinadas else '_' for letra in palabra]) #.join unie todos los elementos del iterable y crea una cadena y la devuelve como salida al usuario
 
-#ejecuta el ciclo del juego
-def jugar():
-    palabra = elige_palabra()
-    letras_adivinadas = set()
-    intentos = 6  # Número de intentos
+    #ejecuta el ciclo del juego
+    def jugar():
+        palabra = elige_palabra()
+        letras_adivinadas = set()
+        intentos = 6  # Número de intentos
 
-    print("¡Bienvenido al juego del Ahorcado!")
-    print(f"La palabra tiene {len(palabra)} letras.") #len devuelve el número de caracteres de una serie 
+        print("¡Bienvenido al juego del Ahorcado!")
+        print(f"La palabra tiene {len(palabra)} letras.") #len devuelve el número de caracteres de una serie 
 
     while intentos > 0: #bucle del juego
         print(f"\nIntentos restantes: {intentos}") #\n se usa para indicar el fin de una línea y el inicio de una nueva
