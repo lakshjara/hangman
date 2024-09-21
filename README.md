@@ -109,19 +109,7 @@ La palabra secreta completa si el jugador perdió.
     else:
         print(f"\nTe has quedado sin intentos. La palabra era '{palabra}'. ¡Mejor suerte la próxima vez!")
 
-'''
-Casos de prueba
-Probando con la palabra: python 
-¡Bienvenido al juego del Ahorcado!
-La palabra tiene 6 letras.
-
-Intentos restantes: 6
-_ _ _ _ _ _
-Adivina una letra: o
-¡Bien hecho! La letra 'o' está en la palabra.
-'''
-
-if __name__ == '__main__':
+    if __name__ == '__main__':
 
     jugar()
 
