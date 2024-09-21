@@ -4,14 +4,18 @@ import random #random.choice es para escoger una palabra aleatroia de la lista
 #Lista de palabras para el juego
 palabras = ['python', 'programacion', 'ahorcado', 'juego', 'computadora', 'teclado', 'pantalla', 'tec', 'borregos']
 
-#utiliza random.choice(palabras) para devolver una palabra seleccionada aleatoriamente de la lista palabras
+"""
+utiliza random.choice(palabras) para devolver una palabra seleccionada aleatoriamente de la lista palabras
+"""
 def elige_palabra():
     return random.choice(palabras) #palabra seleccionada aleatoriamente
 '''
 Probando con la palabra: python
 '''
 
-#muestra el estado actual de la palabra que se está adivinando
+"""
+muestra el estado actual de la palabra que se está adivinando
+"""
 def muestra_progreso(palabra, letras_adivinadas): 
     return ' '.join([letra if letra in letras_adivinadas else '_' for letra in palabra]) #.join unie todos los elementos del iterable y crea una cadena y la devuelve como salida al usuario
 
@@ -20,7 +24,9 @@ Intentos restantes: 6
 _ _ _ _ _ _
 '''
 
-#ejecuta el ciclo del juego
+"""
+ejecuta el ciclo del juego
+"""
 def jugar():
     palabra = elige_palabra()
     letras_adivinadas = set()
@@ -55,6 +61,7 @@ def jugar():
 
 
 '''
+def pruebas():
 Probando con la palabra: python 
 ¡Bienvenido al juego del Ahorcado!
 La palabra tiene 6 letras.
