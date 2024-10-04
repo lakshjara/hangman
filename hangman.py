@@ -2,7 +2,7 @@
 import random #random.choice es para escoger una palabra aleatroia de la lista
 
 #Lista de palabras para el juego
-palabras = ['python', 'programacion', 'ahorcado', 'juego', 'computadora', 'teclado', 'pantalla', 'tec', 'borregos']
+palabras = ['vaca', 'burro', 'caballo', 'cerdito', 'pollito', 'yegua', 'oveja', 'toro', 'borrego', 'pato']
 
 """
 utiliza random.choice(palabras) para devolver una palabra seleccionada aleatoriamente de la lista palabras
@@ -32,8 +32,9 @@ def jugar():
     letras_adivinadas = set()
     intentos = 6  # Número de intentos
 
-    print("¡Bienvenido al juego del Ahorcado!")
+    print("¡Bienvenido al juego del Ahorcado de animales de la granja!")
     print(f"La palabra tiene {len(palabra)} letras.") #len devuelve el número de caracteres de una serie 
+    print("PISTA: La palabra puede estar en diminutivo.")
 
     while intentos > 0: #bucle del juego
         print(f"\nIntentos restantes: {intentos}") #\n se usa para indicar el fin de una línea y el inicio de una nueva
@@ -59,19 +60,53 @@ def jugar():
     else:
         print(f"\nTe has quedado sin intentos. La palabra era '{palabra}'. ¡Mejor suerte la próxima vez!")
 
-
-'''
 def pruebas():
-Probando con la palabra: python 
-¡Bienvenido al juego del Ahorcado!
-La palabra tiene 6 letras.
+    prueba = '''
+    Probando con la palabra: python 
+    ¡Bienvenido al juego del Ahorcado!
+    La palabra tiene 6 letras.
 
-Intentos restantes: 6
-_ _ _ _ _ _
-Adivina una letra: o
-¡Bien hecho! La letra 'o' está en la palabra.
+    Intentos restantes: 6
+    _ _ _ _ _ _
+    Adivina una letra: o
+    ¡Bien hecho! La letra 'o' está en la palabra.
 '''
+    print(prueba)
 
-if __name__ == '__main__':
+def mostrar_instrucciones():
+    instrucciones = '''
+    Instrucciones del Juego del Ahorcado:
+    
+    1. El objetivo es adivinar la palabra secreta una letra a la vez
+    2. Tienes 6 intentos
+    3. Por cada letra incorrecta, se resta un intento
+    4. Si adivinas todas las letras antes de que se te acaben los intentos, ¡ganas!
+    5. Si se te acaban los intentos antes de adivinar la palabra, pierdes
+    '''
+    print(instrucciones)
 
-    jugar()
+def menu():
+    print("Menú de opciones")
+    print("1. Instrucciones del juego")
+    print("2. Muestra del juego")
+    print("3. Jugar Ahorcado")
+    print("4. Salir")
+
+def main():
+    while True: 
+        menu()
+        opcion = input("Selecciona una opción: ")
+        if opcion == "1":
+            mostrar_instrucciones()
+        elif opcion == "2":
+            pruebas()
+        elif opcion == "3":
+            jugar()
+        elif opcion == "4":
+            print("¡Hasta luego! Espero hayas difrutado el juego.")
+        else:
+            print("Opción inválida")
+
+
+
+main()
