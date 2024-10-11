@@ -6,7 +6,7 @@ En este proyecto se demostrará el manejo de funciones en el lenguaje de program
 ### contexto
 El juego del Ahorcado o "Hangman" es una actividad desafiante y divertida que se basa en deducción y desarrolla el conociemiento del vocaburario de los jugadores. Fomenta el aprendizaje de nuevas palabras resforzando así las habilidades lingüísticas y ortográficas.
 
-Este juego consta de adivinar letras para descubrir la palabra oculta. Los jugadores deberán encontrar la palabra antes de que se complete el dibujo del ahorcado, el cual se completa progresivamente con cada error en la adivinanza. 
+Este juego consta de adivinar letras para descubrir la palabra oculta. Los jugadores deberán encontrar la palabra antes de que se terminen los intentos del juego, el cual se completa progresivamente con cada error en la adivinanza. 
 
 ### Instrucciones
 
