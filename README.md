@@ -23,6 +23,7 @@ animales.txt
 Link de descarga para Python
 https://www.python.org/downloads/ 
 
+
 Inicio del juego: un jugador selecciona una pablabra que ocultará con guiones, cada guion representando una letra de la palabra. 
 
 Adivinanza de Letras: Los participantes sugieren letras una por una, y cada letra correcta se revela en la posición correspondiente de los guiones. Cada error, es decir cada letra que no está en la palabra, añade una parte al dibujo del ahorcado.
