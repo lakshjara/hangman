@@ -3,7 +3,7 @@ En este proyecto se demostrará el manejo de funciones en el lenguaje de program
 
 # Hangman
 
-### contexto
+### Contexto
 El juego del Ahorcado o "Hangman" es una actividad desafiante y divertida que se basa en deducción y desarrolla el conociemiento del vocaburario de los jugadores. Fomenta el aprendizaje de nuevas palabras resforzando así las habilidades lingüísticas y ortográficas.
 
 Este juego consta de adivinar letras para descubrir la palabra oculta. Los jugadores deberán encontrar la palabra antes de que se terminen los intentos del juego, el cual se completa progresivamente con cada error en la adivinanza. 
@@ -26,6 +26,8 @@ https://www.python.org/downloads/
 ### Teclas utilizadas en el juego
 1. Abecedario
 2. Números
+
+### Procedimiento del juego
    
 Inicio del juego: un jugador selecciona una pablabra que ocultará con guiones, cada guion representando una letra de la palabra. 
 
