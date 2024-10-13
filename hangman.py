@@ -1,17 +1,16 @@
 #hangman
+
 import random #random.choice es para escoger una palabra aleatroia de la lista
 
-#Lista de palabras para el juego
-palabras = ['vaca', 'burro', 'caballo', 'cerdito', 'pollito', 'yegua', 'oveja', 'toro', 'borrego', 'pato']
+def cargar_palabras_desde_archivo():
+    with open('animales.txt', 'r') as archivo:  # Abre el archivo en modo lectura
+        palabras = archivo.read().splitlines()  # Lee el contenido y divide las líneas en una lista
+    return palabras
 
-"""
-utiliza random.choice(palabras) para devolver una palabra seleccionada aleatoriamente de la lista palabras
-"""
+# Selecciona una palabra aleatoria de las palabras cargadas desde el archivo
 def elige_palabra():
-    return random.choice(palabras) #palabra seleccionada aleatoriamente
-'''
-Probando con la palabra: python
-'''
+    palabras = cargar_palabras_desde_archivo()  # Llama a la función para obtener las palabras
+    return random.choice(palabras)
 
 """
 muestra el estado actual de la palabra que se está adivinando
@@ -74,16 +73,18 @@ def pruebas():
     print(prueba)
 
 def mostrar_instrucciones():
-    instrucciones = '''
-    Instrucciones del Juego del Ahorcado:
-    
-    1. El objetivo es adivinar la palabra secreta una letra a la vez
-    2. Tienes 6 intentos
-    3. Por cada letra incorrecta, se resta un intento
-    4. Si adivinas todas las letras antes de que se te acaben los intentos, ¡ganas!
-    5. Si se te acaban los intentos antes de adivinar la palabra, pierdes
-    '''
-    print(instrucciones)
+    """
+    Muestra las instrucciones del juego.
+    """
+    instrucciones = [
+        "Instrucciones del Juego del Ahorcado:",
+        "1. El objetivo es adivinar la palabra secreta una letra a la vez.",
+        "2. Tienes 6 intentos para adivinar correctamente.",
+        "3. Cada letra incorrecta reduce un intento.",
+        "4. Si adivinas todas las letras antes de que se te acaben los intentos, ¡ganas!",
+        "5. Si se te acaban los intentos antes de adivinar la palabra, pierdes."
+    ]
+    print("\n" + "\n".join(instrucciones) + "\n")  # Imprimir la lista de instrucciones
 
 def menu():
     print("Menú de opciones")
@@ -104,9 +105,8 @@ def main():
             jugar()
         elif opcion == "4":
             print("¡Hasta luego! Espero hayas difrutado el juego.")
+            break
         else:
             print("Opción inválida")
-
-
 
 main()
